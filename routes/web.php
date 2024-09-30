@@ -23,3 +23,4 @@ Route::resource('chirps', ChirpController::class)
     ->middleware(['auth', 'verified']);
 
 require __DIR__.'/auth.php';
+
