@@ -29,8 +29,9 @@ return new class extends Migration
      *
      * @return void
      */
-    public function down()
+    public function down():void
     {
-        Schema::drop('followers');
+        Schema::dropForeign(['follower_id', 'leader_id']);
+        Schema::dropIfExists('followers');
     }
 };
