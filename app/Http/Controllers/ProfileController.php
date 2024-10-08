@@ -79,4 +79,14 @@ class ProfileController extends Controller
         return Redirect::back();
     }
 
+    /**
+     * Display a listing of the resource.
+     */
+    public function followings(Request $request): View
+    {
+        return view('following.index',[
+            'followings' => $request->user()->followings,
+        ]);
+    }
+
 }
